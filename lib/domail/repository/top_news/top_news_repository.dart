@@ -11,7 +11,7 @@ final Dio dio;
 Future<List<Article>> getTopNews() async {
 try {
 final Response response = await dio.get(
-Endpoints.topStories,
+Endpoints.motorcycle,
 queryParameters: {
 'locale': 'ru',
 'language': 'ru',

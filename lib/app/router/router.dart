@@ -1,14 +1,13 @@
+import 'package:news_brief/app/features/InfoScreen/info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:talker_flutter/talker_flutter.dart';
-
 import 'package:news_brief/app/app.dart';
 import 'package:news_brief/di/di.dart';
 
 final GlobalKey<NavigatorState> _rootNavigationKey = GlobalKey<NavigatorState>(
   debugLabel: 'root',
 );
-
 final GoRouter router = GoRouter(
   debugLogDiagnostics: true,
   observers: [TalkerRouteObserver(talker)],
@@ -24,17 +23,17 @@ final GoRouter router = GoRouter(
         );
       },
       // для следующей лабораторной работы
-      // routes: [
-      // GoRoute(
-      // path: 'article/:id',
-      // pageBuilder: (context, state) {
-      // return NoTransitionPage<void>(
-      // key: state.pageKey,
-      // child: const ArticleScreen(),
-      // );
-      // },
-      // ),
-      // ],
+      routes: [
+        GoRoute(
+          path: 'article/:id',
+          pageBuilder: (context, state) {
+            return NoTransitionPage<void>(
+              key: state.pageKey,
+              child: const InfoScreen(),
+            );
+          },
+        ),
+      ],
     ),
   ],
 );

@@ -7,12 +7,13 @@ sealed class HomeState extends Equatable {
 }
 
 final class HomeInitial extends HomeState {}
+
 final class HomeLoadInProgress extends HomeState {}
+
 final class HomeLoadSuccess extends HomeState {
   const HomeLoadSuccess({
     required this.articles,
   });
-
   final List<Article> articles;
   @override
   List<Object> get props => [articles];
