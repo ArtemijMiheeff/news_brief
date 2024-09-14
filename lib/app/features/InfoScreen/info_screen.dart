@@ -11,10 +11,10 @@ class InfoScreen extends StatefulWidget {
 }
 
 class _InfoScreenState extends State<InfoScreen> {
-  final _homeBloc = HomeBloc(getIt<TopAnimeRepository>());
+  final _infoBloc = InfoBlock(getIt<TopNewsRepository>());
   @override
   void initState() {
-    _homeBloc.add(const HomeLoad());
+    _infoBloc.add(const InfoLoad());
     super.initState();
   }
 
@@ -28,15 +28,15 @@ class _InfoScreenState extends State<InfoScreen> {
           ),
         ),
 
-        body: BlocBuilder<HomeBloc, HomeState>(
-          bloc: _homeBloc,
+        body: BlocBuilder<InfoBlock, InfoState>(
+          bloc: _infoBloc,
           builder: (context, state) {
-          if (state is HomeLoadInProgress) {
+          if (state is InfoLoadInProgress) {
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
-          if (state is HomeLoadSuccess) {
+          if (state is InfoLoadSuccess) {
           List<Article> articles = state.articles;
           return SingleChildScrollView(
             padding: const EdgeInsets.all(20),
@@ -44,7 +44,7 @@ class _InfoScreenState extends State<InfoScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Аниме',
+                  'Moto',
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 20.ph,
@@ -65,12 +65,12 @@ class _InfoScreenState extends State<InfoScreen> {
             ),
             );
           }
-          if (state is HomeLoadFailure) {
+          if (state is InfoLoadFailure) {
             return ErrorCard(
               title: 'Ошибка',
               description: state.exception.toString(),
               onReload: () {
-                _homeBloc.add(const HomeLoad());
+                _infoBloc.add(const InfoLoad());
               },
             );
           }

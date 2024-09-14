@@ -16,7 +16,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       if (state is! HomeLoadSuccess) {
         emit(HomeLoadInProgress());
       }
-      final articles = await top_news_repository.getCountries();
+      final articles = await top_news_repository.getTopNews();
       emit(HomeLoadSuccess(
         articles: articles,
       ));

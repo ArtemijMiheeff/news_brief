@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 var offset = 0;
 
 class _HomeScreenState extends State<HomeScreen> {
-  final _homeBloc = HomeBloc(getIt<GeoRepository>());
+  final _homeBloc = HomeBloc(getIt<TopNewsRepository>());
   @override
   void initState() {
     _homeBloc.add(const HomeLoad());
