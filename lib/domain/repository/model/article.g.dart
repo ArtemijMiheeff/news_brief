@@ -7,17 +7,15 @@ part of 'article.dart';
 // **************************************************************************
 
 Article _$ArticleFromJson(Map<String, dynamic> json) => Article(
-      code: json['code'] as String,
-      currencyCodes: (json['currencyCodes'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      name: json['name'] as String,
-      wikiDataId: json['wikiDataId'] as String,
+      make: json['make'] as String,
+      model: json['model'] as String,
+      year: json['year'] as String,
+      displacement: json['year'] as String,
     );
 
 Map<String, dynamic> _$ArticleToJson(Article instance) => <String, dynamic>{
-      'code': instance.code,
-      'currencyCode': instance.currencyCodes,
-      'name': instance.name,
-      'wikiDataId': instance.wikiDataId,
+      'make': instance.make,
+      'model': instance.model,
+      'year': instance.year,
+      'displacement': instance.displacement,
     };

@@ -4,17 +4,17 @@ part 'article.g.dart';
 @JsonSerializable()
 class Article {
   Article({
-    required this.code,
-    required this.currencyCodes,
-    required this.name,
-    required this.wikiDataId,
+    required this.make,
+    required this.model,
+    required this.year,
+    required this.displacement,
   });
 
   @JsonKey(name: '_id')
-  final String code;
-  final String name;
-  final List<String> currencyCodes;
-  final String wikiDataId;
+  final String make;
+  final String model;
+  final String year;
+  final String displacement;
 
   factory Article.fromJson(Map<String, dynamic> json) =>
       _$ArticleFromJson(json);
