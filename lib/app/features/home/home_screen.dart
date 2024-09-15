@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_brief/app/app.dart';
+import 'package:news_brief/app/features/home/bloc/home_bloc.dart';
 import 'package:news_brief/di/di.dart';
 import 'package:news_brief/domain/domain.dart';
 

@@ -4,6 +4,7 @@ import 'package:talker_flutter/talker_flutter.dart';
 import 'package:dio/dio.dart';
 import 'package:news_brief/data/data.dart';
 import 'package:news_brief/app/app.dart';
+import 'package:news_brief/app/features/home/bloc/home_bloc.dart';
 
 final GetIt getIt = GetIt.instance;
 final Talker talker = TalkerFlutter.init();
