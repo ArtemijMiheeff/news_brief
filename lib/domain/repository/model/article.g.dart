@@ -10,7 +10,7 @@ Article _$ArticleFromJson(Map<String, dynamic> json) => Article(
       make: json['make'] as String,
       model: json['model'] as String,
       year: json['year'] as String,
-      displacement: json['year'] as String,
+      displacement: json['displacement'] as String,
     );
 
 Map<String, dynamic> _$ArticleToJson(Article instance) => <String, dynamic>{

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:news_brief/domain/domain.dart';
 
-abstract class TopNewsRepositoryIterface {
+abstract class TopNewsRepositoryInterface {
 Future<List<Article>> getTopNews();
 }

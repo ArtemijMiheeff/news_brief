@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Home'),
+          title: const Text('Request page'),
         ),
         body: BlocBuilder<HomeBloc, HomeState>(
           bloc: _homeBloc,
@@ -43,6 +43,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // const TextField(
+                    //   decoration: InputDecoration(
+                    //     border: OutlineInputBorder(),
+                    //     labelText: 'Make',
+                    //   ),
+                    // ),
+                    // const TextField(
+                    //   decoration: InputDecoration(
+                    //     border: OutlineInputBorder(),
+                    //     labelText: 'Model',
+                    //   ),
+                    // ),
+                    // const TextField(
+                    //   decoration: InputDecoration(
+                    //     border: OutlineInputBorder(),
+                    //     labelText: 'Year',
+                    //   ),
+                    // ),
                     Text(
                       'Мотоциклы',
                       style: Theme.of(context).textTheme.headlineLarge,

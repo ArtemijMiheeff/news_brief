@@ -4,7 +4,7 @@ import 'package:news_brief/data/data.dart';
 import 'package:news_brief/domain/domain.dart';
 
 
-class TopNewsRepository extends TopNewsRepositoryIterface {
+class TopNewsRepository extends TopNewsRepositoryInterface {
 TopNewsRepository({required this.dio});
 final Dio dio;
 @override
