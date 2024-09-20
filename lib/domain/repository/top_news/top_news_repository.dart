@@ -13,8 +13,9 @@ try {
 final Response response = await dio.get(
 Endpoints.motorcycle,
 queryParameters: {
-'locale': 'ru',
-'language': 'ru',
+'make': 'Kawasaki',
+'model': 'Ninja 400',
+'year': '2020',
 },
 );
 final news = (response.data['data'] as List)

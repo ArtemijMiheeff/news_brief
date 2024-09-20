@@ -1,4 +1,4 @@
 class Endpoints {
   Endpoints._();
-  static const String motorcycle = 'motorcycle';
+  static const String motorcycle = 'motorcycles';
 }

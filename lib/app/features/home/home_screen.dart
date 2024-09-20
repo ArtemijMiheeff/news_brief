@@ -48,31 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: Theme.of(context).textTheme.headlineLarge,
                     ),
                     20.ph,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                if (offset > 0) {
-                                  offset -= 1;
-                                }
-                              });
-                            },
-                            child: const Text('prev')),
-                        Text(
-                          '$offset',
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                        ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                offset += 1;
-                              });
-                            },
-                            child: const Text('next'))
-                      ],
-                    ),
                     ListView.separated(
                       primary: false,
                       shrinkWrap: true,

@@ -4,10 +4,7 @@ import 'package:news_brief/app/app.dart';
 import 'package:news_brief/di/di.dart';
 import 'package:news_brief/domain/domain.dart';
 import 'package:news_brief/domain/repository/model/article.dart';
-
-// var capital = 'Москва';
-// var callingCode = '+7';
-// var numRegions = '79';
+import 'package:go_router/go_router.dart';
 
 class InfoScreen extends StatefulWidget {
   const InfoScreen({super.key});
@@ -38,16 +35,11 @@ class _InfoScreenState extends State<InfoScreen> {
             'Россия',
             style: Theme.of(context).textTheme.displayLarge,
           ),
-          Text('Марка: $make',
-              style: Theme.of(context).textTheme.displayMedium),
-          Text(
-            'Модель: $model',
-            style: Theme.of(context).textTheme.displaySmall,
-          ),
-          Text(
-            'Объем двигателя: $displacement',
-            style: Theme.of(context).textTheme.displaySmall,
-          )
+          ElevatedButton(
+            onPressed: (){
+              context.push('/home/article/1');
+            },
+            child: Text('Back'))
         ],
       ),
     );
