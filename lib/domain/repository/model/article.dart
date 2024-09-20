@@ -1,7 +1,7 @@
-import 'package:json_annotation/json_annotation.dart';
+//import 'package:json_annotation/json_annotation.dart';
 part 'article.g.dart';
 
-@JsonSerializable()
+//@JsonSerializable()
 class Article {
   Article({
     required this.make,
@@ -10,7 +10,7 @@ class Article {
     required this.displacement,
   });
 
-  @JsonKey(name: '_id')
+  //@JsonKey(name: '_id')
   final String make;
   final String model;
   final String year;

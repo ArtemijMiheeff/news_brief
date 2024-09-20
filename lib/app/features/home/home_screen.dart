@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
 
         body: Container( 
-          color: Colors.lightBlue[50], 
+          color: const Color.fromRGBO(255, 255, 250, 1), 
             child: BlocBuilder<HomeBloc, HomeState>(
               bloc: _homeBloc,
               builder: (context, state) {
