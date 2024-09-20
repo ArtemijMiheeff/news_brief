@@ -14,26 +14,105 @@ class InfoScreen extends StatefulWidget {
 }
 
 class _InfoScreenState extends State<InfoScreen> {
+
+  final _infoBloc = InfoBloc(getIt<TopNewsRepository>());
+
+  @override
+  void initState() {
+    _infoBloc.add(const InfoLoad());
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Info page'),
-        backgroundColor: const Color.fromARGB(255, 8, 8, 66),
-      ),
-      body: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(5),
-            child: Image.network(
-              width: 350,
-              height: 350,
-              'https://static.insales-cdn.com/images/collections/1/2780/88910556/Ducati.jpg',
-              fit: BoxFit.cover,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Info Page',),
+          backgroundColor: const Color.fromARGB(255, 8, 8, 66),
+        ),
+
+        body: Container( 
+          color: const Color.fromRGBO(227, 221, 225, 1), 
+            child: BlocBuilder<InfoBloc, InfoState>(
+              bloc: _infoBloc,
+              builder: (context, state) {
+              if (state is InfoLoadInProgress) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              if (state is InfoLoadSuccess) {
+                List<Article> articles = state.articles;
+                return SingleChildScrollView(
+                  padding: const EdgeInsets.all(5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Specifications',
+                        style: Theme.of(context).textTheme.headlineLarge,
+                      ),
+                      20.ph,
+                    Text(
+                      articles.make,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    10.ph,
+                    Text(
+                      articles.model,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    10.ph,
+                    Text(
+                      articles.year,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    10.ph,
+                    Text(
+                      articles.displacement,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    10.ph,
+                      // ListView.separated(
+                      //   primary: false,
+                      //   shrinkWrap: true,
+                      //   itemCount: articles.length,
+                      //   itemBuilder: (context, index) {
+                      //     // return ArticleCard(
+                      //     //   article: articles[index],
+                      //     // );
+                      //   },
+                      //   separatorBuilder: (context, index) {
+                      //     return 20.ph;
+                      //   },
+                      // ),
+                    ],
+                  ),
+                );
+              }
+              if (state is InfoLoadFailure) {
+                return ErrorCard(
+                  title: 'Error',
+                  description: state.exception.toString(),
+                  onReload: () {
+                    _infoBloc.add(const InfoLoad());
+                  },
+                );
+              }
+              return const SizedBox();
+              },
             ),
           ),
-        ],
-      ),
-    );
+        ),
+      );
   }
 }

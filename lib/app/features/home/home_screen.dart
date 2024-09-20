@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
               if (state is HomeLoadSuccess) {
                 List<Article> articles = state.articles;
                 return SingleChildScrollView(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
