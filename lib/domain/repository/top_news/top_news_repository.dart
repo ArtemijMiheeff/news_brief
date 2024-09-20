@@ -13,12 +13,12 @@ try {
 final Response response = await dio.get(
 Endpoints.motorcycle,
 queryParameters: {
-'make': 'Kawasaki',
-'model': 'Ninja 400',
-'year': '2020',
+'make': 'Ducati',
+'model': '',
+'year': '2014',
 },
 );
-final motorcycles = (response.data['data'] as List).map((e) => Article.fromJson(e)).toList();
+final motorcycles = (response.data as List).map((e) => Article.fromJson(e)).toList();
 return motorcycles;
 
 //final motorcycles = List<Article>.fromJson(response.data['data]);

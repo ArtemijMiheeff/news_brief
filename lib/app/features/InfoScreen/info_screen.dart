@@ -18,28 +18,20 @@ class _InfoScreenState extends State<InfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Характеристики'),
+        title: const Text('Info page'),
+        backgroundColor: const Color.fromARGB(255, 8, 8, 66),
       ),
       body: Column(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(5),
             child: Image.network(
-              width: 100,
-              height: 100,
-              'hhttps://avatars.mds.yandex.net/i?id=c4c4fb2992c158ee531c33ac19f9e416_l-9197564-images-thumbs&n=13.png',
+              width: 350,
+              height: 350,
+              'https://static.insales-cdn.com/images/collections/1/2780/88910556/Ducati.jpg',
               fit: BoxFit.cover,
             ),
           ),
-          Text(
-            'Россия',
-            style: Theme.of(context).textTheme.displayLarge,
-          ),
-          ElevatedButton(
-            onPressed: (){
-              context.push('/home/article/1');
-            },
-            child: Text('Back'))
         ],
       ),
     );

@@ -25,10 +25,11 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Home Page',),
+          backgroundColor: const Color.fromARGB(255, 8, 8, 66),
         ),
 
         body: Container( 
-          color: const Color.fromRGBO(255, 255, 250, 1), 
+          color: const Color.fromRGBO(227, 221, 225, 1), 
             child: BlocBuilder<HomeBloc, HomeState>(
               bloc: _homeBloc,
               builder: (context, state) {
@@ -45,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Motorcycles',
+                        'Ducati motorcycles',
                         style: Theme.of(context).textTheme.headlineLarge,
                       ),
                       20.ph,
