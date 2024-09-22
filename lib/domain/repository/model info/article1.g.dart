@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'article.dart';
+part of 'article1.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Article _$ArticleFromJson(Map<String, dynamic> json) => Article(
+Article1 _$ArticleFromJson(Map<String, dynamic> json) => Article1(
       make: json['make'] as String,
       model: json['model'] as String,
       year: json['year'] as String,
@@ -21,7 +21,7 @@ Article _$ArticleFromJson(Map<String, dynamic> json) => Article(
       fuel_capacity: json['fuel_capacity'] as String,
     );
 
-Map<String, dynamic> _$ArticleToJson(Article instance) => <String, dynamic>{
+Map<String, dynamic> _$ArticleToJson(Article1 instance) => <String, dynamic>{
       'make': instance.make,
       'model': instance.model,
       'year': instance.year,

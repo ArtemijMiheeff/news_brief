@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'article.g.dart';
+part 'article1.g.dart';
 
 @JsonSerializable()
-class Article {
-  Article({
+class Article1 {
+  Article1({
     required this.make,
     required this.model,
     required this.year,
@@ -32,7 +32,7 @@ class Article {
   final String total_weight;
   final String fuel_capacity;
 
-  factory Article.fromJson(Map<String, dynamic> json) =>
+  factory Article1.fromJson(Map<String, dynamic> json) =>
       _$ArticleFromJson(json);
 
   Map<String, dynamic> toJson() => _$ArticleToJson(this);

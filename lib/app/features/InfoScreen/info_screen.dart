@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_brief/app/app.dart';
 import 'package:news_brief/di/di.dart';
 import 'package:news_brief/domain/domain.dart';
-import 'package:news_brief/domain/repository/model/article.dart';
+import 'package:news_brief/domain/repository/model%20info/article1.dart';
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 class InfoScreen extends StatefulWidget {
@@ -54,47 +55,19 @@ class _InfoScreenState extends State<InfoScreen> {
                         style: Theme.of(context).textTheme.headlineLarge,
                       ),
                       20.ph,
-                      // Text(
-                      //   articles.make,
-                      //   maxLines: 1,
-                      //   overflow: TextOverflow.ellipsis,
-                      //   style: Theme.of(context).textTheme.titleLarge,
-                      // ),
-                      // 10.ph,
-                      // Text(
-                      //   articles.model,
-                      //   maxLines: 1,
-                      //   overflow: TextOverflow.ellipsis,
-                      //   style: Theme.of(context).textTheme.titleLarge,
-                      // ),
-                      // 10.ph,
-                      // Text(
-                      //   articles.year,
-                      //   maxLines: 1,
-                      //   overflow: TextOverflow.ellipsis,
-                      //   style: Theme.of(context).textTheme.titleLarge,
-                      // ),
-                      // 10.ph,
-                      // Text(
-                      //   articles.displacement,
-                      //   maxLines: 1,
-                      //   overflow: TextOverflow.ellipsis,
-                      //   style: Theme.of(context).textTheme.titleLarge,
-                      // ),
-                      // 10.ph,
-                      // ListView.separated(
-                      //   primary: false,
-                      //   shrinkWrap: true,
-                      //   itemCount: articles.length,
-                      //   itemBuilder: (context, index) {
-                      //     // return ArticleCard(
-                      //     //   article: articles[index],
-                      //     // );
-                      //   },
-                      //   separatorBuilder: (context, index) {
-                      //     return 20.ph;
-                      //   },
-                      // ),
+                        ListView.separated(
+                        primary: false,
+                        shrinkWrap: true,
+                        itemCount: articles.length,
+                        itemBuilder: (context, index) {
+                          return ArticleCardInfo(
+                            article: articles[index],
+                          );
+                        },
+                        separatorBuilder: (context, index) {
+                          return 20.ph;
+                        },
+                      ),
                     ],
                   ),
                 );
