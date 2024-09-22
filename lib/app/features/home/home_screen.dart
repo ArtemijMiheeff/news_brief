@@ -38,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: CircularProgressIndicator(),
                 );
               }
+              
               if (state is HomeLoadSuccess) {
                 List<Article> articles = state.articles;
                 return SingleChildScrollView(
