@@ -60,9 +60,11 @@ class _InfoScreenState extends State<InfoScreen> {
                         shrinkWrap: true,
                         itemCount: articles.length,
                         itemBuilder: (context, index) {
+                          //if (articles.length==articles[index]){
                           return ArticleCardInfo(
                             article: articles[index],
                           );
+                          //}
                         },
                         separatorBuilder: (context, index) {
                           return 20.ph;

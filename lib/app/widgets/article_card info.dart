@@ -24,7 +24,8 @@ class ArticleCardInfo extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+
+                                Text(
                   "Тип:",
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
@@ -37,12 +38,103 @@ class ArticleCardInfo extends StatelessWidget {
                     fontSize: 20, // Задайте здесь желаемый размер шрифта
                   ),
                 ),
-                Text(
+                                Text(
                   "Кубатура:",
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Text(
                   article.displacement,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  //style: Theme.of(context).textTheme.titleLarge,
+                  style: TextStyle(
+                    fontSize: 20, // Задайте здесь желаемый размер шрифта
+                  ),
+                ),
+                                Text(
+                  "Двигатель:",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  article.engine,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  //style: Theme.of(context).textTheme.titleLarge,
+                  style: TextStyle(
+                    fontSize: 20, // Задайте здесь желаемый размер шрифта
+                  ),
+                ),
+                                Text(
+                  "Мощность:",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  article.power,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  //style: Theme.of(context).textTheme.titleLarge,
+                  style: TextStyle(
+                    fontSize: 20, // Задайте здесь желаемый размер шрифта
+                  ),
+                ),
+                                Text(
+                  "Охлаждение:",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  article.cooling,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  //style: Theme.of(context).textTheme.titleLarge,
+                  style: TextStyle(
+                    fontSize: 20, // Задайте здесь желаемый размер шрифта
+                  ),
+                ),
+                                Text(
+                  "КПП:",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  article.gearbox,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  //style: Theme.of(context).textTheme.titleLarge,
+                  style: TextStyle(
+                    fontSize: 20, // Задайте здесь желаемый размер шрифта
+                  ),
+                ),
+                                Text(
+                  "Привод:",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  article.transmission,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  //style: Theme.of(context).textTheme.titleLarge,
+                  style: TextStyle(
+                    fontSize: 20, // Задайте здесь желаемый размер шрифта
+                  ),
+                ),
+                                                Text(
+                  "Вес:",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  article.total_weight,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  //style: Theme.of(context).textTheme.titleLarge,
+                  style: TextStyle(
+                    fontSize: 20, // Задайте здесь желаемый размер шрифта
+                  ),
+                ),
+                                                Text(
+                  "Топливный бак:",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  article.fuel_capacity,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   //style: Theme.of(context).textTheme.titleLarge,

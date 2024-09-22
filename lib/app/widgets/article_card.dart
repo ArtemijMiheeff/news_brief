@@ -24,6 +24,9 @@ class ArticleCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                  Row(
+                    children: [
+                                      Image.network('https://i.ebayimg.com/images/g/5xsAAOSwga9eNuX8/s-l1600.png', width: 50, height: 50,),
                 Text(
                   article.make,
                   maxLines: 1,
@@ -37,6 +40,8 @@ class ArticleCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 5.ph,
+                    ],
+                  )
               ],
             ),
           ),
