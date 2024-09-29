@@ -7,7 +7,7 @@ import 'package:news_brief/domain/domain.dart';
 class CharacterRepository extends CharacterRepositoryInterface {
 CharacterRepository({required this.dio});
 final Dio dio;
-Future<Article> ChGetById() async {  //List<Article> где менять на Motorcycles?
+Future<Article> ChGetById() async {  
 try {
 final Response response = await dio.get(
 Endpoints.getById,
