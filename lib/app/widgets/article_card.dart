@@ -26,15 +26,15 @@ class ArticleCard extends StatelessWidget {
               children: [
                   Row(
                     children: [
-                                      Image.network('https://i.ebayimg.com/images/g/5xsAAOSwga9eNuX8/s-l1600.png', width: 50, height: 50,),
+                                      //Image.network('https://i.ebayimg.com/images/g/5xsAAOSwga9eNuX8/s-l1600.png', width: 50, height: 50,),
+                // Text(
+                //   article.make,
+                //   maxLines: 1,
+                //   overflow: TextOverflow.ellipsis,
+                //   style: Theme.of(context).textTheme.titleLarge,
+                // ),
                 Text(
-                  article.make,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
-                Text(
-                  article.model,
+                  article.name,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.titleLarge,

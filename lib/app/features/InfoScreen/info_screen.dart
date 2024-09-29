@@ -6,6 +6,7 @@ import 'package:news_brief/domain/domain.dart';
 import 'package:news_brief/domain/repository/model%20info/article1.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
+import 'package:news_brief/domain/repository/top_news%20info/CharacterRepository.dart';
 
 class InfoScreen extends StatefulWidget {
   const InfoScreen({super.key});
@@ -16,7 +17,7 @@ class InfoScreen extends StatefulWidget {
 
 class _InfoScreenState extends State<InfoScreen> {
 
-  final _infoBloc = InfoBloc(getIt<TopNewsRepository>());
+  final _infoBloc = InfoBloc(getIt<CharacterRepository>());
 
   @override
   void initState() {

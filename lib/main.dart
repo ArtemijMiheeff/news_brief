@@ -5,17 +5,17 @@ import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
   // Проверка разрешения
-if (await Permission.camera.isGranted) {
-  // Доступ к камере разрешен
-} else {
-  // Запрос разрешения
-  var status = await Permission.camera.request();
-  if (status.isGranted) {
-    // Доступ к камере разрешен
-  } else {
-    // Доступ к камере отклонен
-  }
-}
+// if (await Permission.camera.isGranted) {
+//   // Доступ к камере разрешен
+// } else {
+//   // Запрос разрешения
+//   var status = await Permission.camera.request();
+//   if (status.isGranted) {
+//     // Доступ к камере разрешен
+//   } else {
+//     // Доступ к камере отклонен
+//   }
+// }
 
   WidgetsFlutterBinding.ensureInitialized();
   setupLocator();
